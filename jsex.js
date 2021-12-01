@@ -81,13 +81,50 @@ if (num1 === ''){
 let n = 500;
 
 nextPrime:
-    for (let i = 1; i <= n; i++) { // Для всех i...
+    for (let z = 1; z <= n; z++) { // Для всех z...
 
-        for (let j = 2; j < i; j++) { // проверить, делится ли число..
-            if (i % j === 0) continue nextPrime; // не подходит, берём следующее
+        for (let j = 2; j < z; j++) { // проверить, делится ли число..
+            if (z % j === 0) continue nextPrime; // не подходит, берём следующее
         }
 
-        console.log(i); // простое число
+        console.log(z); // простое число
     }
 
-//
+//6. Создайте скрипт, который выведет числа от 1000 до 300 в обратном порядке;
+
+let n1 = 1000;
+let n2 = 300;
+
+
+    for (let i = n1; i >= n2; i--) { // Для всех i...
+        console.log(i); // числа в обратном порядке
+    }
+//7. Попросите пользователя ввести число. Выведите результат сложения, вычетания, деления и умножения введенного числа на все
+// числа от 1 до 100.
+let enter_number = prompt('Введите число для функционала');
+for (let x = 1; x <= 100; x++) {
+    console.log( x / enter_number);
+    console.log( x - enter_number);
+    console.log( x + enter_number);
+    console.log(x * enter_number);
+}
+let operand_1 = prompt('Введите операнд');
+let sing = prompt('Введите знак');
+let operand_2 = prompt('Введите второй операнд');
+if (sing === '+'){
+    alert(operand_1 + operand_2);
+}else if(sing === '-') {
+    alert(operand_1 - operand_2);
+}else if (sing === '/'){
+    alert(operand_1 / operand_2);
+}else if (sing === '*'){
+    alert(operand_1 * operand_2);
+}else if (operand_1 === ''){
+    alert('Введите операнд 1');
+}else if (sing === ''){
+    alert('Введите знак');
+}else if(operand_2 === ''){
+    alert('Введите опернд 2');
+}else if (sing === '/', operand_2 === '0'){
+    alert('На ноль делить нельзя');
+}
